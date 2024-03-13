@@ -9,7 +9,7 @@
 <section class="creator-info">
     <h2>Brock Smith</h2>
     <h3>Full Time Learner / Current College Student / Ordained Dudeist</h3>
-    <p>My name is Brock Smith, but online I am known as `plexlad`. While I am a current student, I love programming and working with technical software. Some of my experience includes daily linux use, usage of several programming languages, and a vindication to always learn and try to understand things.</p>
+    <p>My name is Brock Smith, but online I am known as <strong>plexlad</strong>. While I am a current student, I love programming and working with technical software. Some of my experience includes daily linux use, usage of several programming languages, and a vindication to always learn and try to understand things.</p>
     <p>This is my website. My portfolio is <a href="/portfolio">here</a>.</p>
 </section>
 <section>
@@ -21,7 +21,7 @@
             {% if loop.index >= 5 %}{% break %}{% endif %}
                 <li>{{ post.date | date() }} - <a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
             {% else %}
-                Nothing to see here.
+            Nothing to see here. (yet...)
             {% endfor %}
         </ul>
     </div>

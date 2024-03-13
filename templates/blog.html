@@ -4,6 +4,9 @@
 
 {% block content %}
 <h1 class="title">Blog</h1>
+{% if not section.pages %}
+<div style="text-align: center;">Nothing to see here. (yet...)</div>
+{% endif %}
 <ul>
     {% for page in section.pages %}
     <li>{{ page.date | date() }} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
