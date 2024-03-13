@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}deplexus - {{ page.title }}{% endblock title %}
+
+{% block content %}
+<h1 class="title">{{page.title}}</h1>
+<div class="context">
+    {% if page.updated %}
+    updated {{ page.updated | date() }}<br>
+    created {{ page.date | date() }}<br>
+    {% else %}
+    created {{ page.date | date() }}<br>
+    {% endif %}
+    {{ page.reading_time }} minute read<br>
+    <ul class="authors">
+        <li><strong>Authors:</strong></li>
+        {% for author in page.authors%}
+        <li>{{ author }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{{ page.content | safe }}
+{% endblock content %}

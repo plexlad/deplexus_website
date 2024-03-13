@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}deplexus - blog{% endblock %}
+
+{% block content %}
+<h1 class="title">Blog</h1>
+<ul>
+    {% for page in section.pages %}
+    <li>{{ page.date | date() }} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}

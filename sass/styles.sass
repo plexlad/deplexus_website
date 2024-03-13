@@ -1,0 +1,127 @@
+@use "colors"
+
+@font-face
+  font-family: EczarTitle
+  src: url(Eczar/static/Eczar-Bold.ttf) format("truetype")
+
+@font-face
+  font-family: IBMPlexArticle
+  src: url(IBM_Plex_Serif/IBMPlexSerif-Medium.ttf) format("truetype")
+
+@font-face
+  font-family: IBMPlexMono
+  src: url(IBM_Plex_Mono/IBMPlexMono-Regular.ttf) format("truetype")
+
+$title_font: EczarTitle
+$article_font: IBMPlexArticle
+$mono_font: IBMPlexMono, monospace
+
+$border_radius: 7px
+$border_width: 2px
+
+*
+  color: colors.$dark_fg0
+  font-family: $article_font
+
+body
+  background-color: colors.$dark_bg0
+  color: colors.$dark_fg0
+  margin: 0
+  padding: 20px
+
+html
+  margin: 0 auto
+  max-width: 60rem
+
+header nav
+  background-color: colors.$dark_bg1
+
+  ul
+    border: colors.$dark_fg0 solid $border_width
+    border-radius: $border_radius
+    padding: 1rem
+    margin: 0
+
+    li
+      text-decoration: none
+      display: inline
+
+    li + li::before
+      content: " / "
+
+main
+  margin: 2rem 0 2rem 0
+
+  #hero p
+    text-align: center
+    font-size: 2rem
+    font-style: italic
+
+  &.title
+    margin-top: 0
+
+  section.creator-info
+    background-color: colors.$accent-dim
+    padding: 10px
+    border-radius: $border_radius
+    border: colors.$dark_fg0 solid $border_width 
+
+    *
+      font-family: $article_font
+      text-align: center
+
+    h2
+      margin: 0
+      font-family: EczarTitle
+      font-size: 2rem
+
+    h3
+      margin: 0
+
+h1.title
+  text-align: center
+  font-family: $title_font
+
+a
+  color: colors.$dark_fg1
+
+  &:hover
+    color: colors.$accent_bright
+
+.context
+  color: colors.$dark_fg1
+  font-size: 1rem
+  margin-top: 0
+  text-align: center
+
+  *
+    color: colors.$dark_fg1
+    font-size: 1rem
+
+ul.authors 
+  padding: 0 
+
+  li
+    text-decoration: none
+    display: inline
+
+  li + li::before
+    content: " "
+
+main p
+  text-indent: 3rem
+  font-size: 1.1rem
+
+footer
+  background-color: colors.$dark_bg1
+  border: colors.$dark_fg0 solid $border_width
+  border-radius: $border_radius
+  padding: 0.8rem
+
+  div
+    text-align: center
+    padding: 0.1rem
+
+address
+  font-style: normal
+

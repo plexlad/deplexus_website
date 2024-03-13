@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+ 
+{% block title %}deplexus{% endblock title %}
+
+{% block content %}
+<section id="hero">
+    <p>Optimistic articles and essays by humans.</p>
+</section>
+<section class="creator-info">
+    <h2>Brock Smith</h2>
+    <h3>Full Time Learner / Current College Student / Ordained Dudeist</h3>
+    <p>My name is Brock Smith, but online I am known as `plexlad`. While I am a current student, I love programming and working with technical software. Some of my experience includes daily linux use, usage of several programming languages, and a vindication to always learn and try to understand things.</p>
+    <p>This is my website. My portfolio is <a href="/portfolio">here</a>.</p>
+</section>
+<section>
+    <div>
+        <h2>Recent Posts</h2>
+        <ul>
+            {% set blog = get_section(path="blog/_index.md") %}
+            {% for post in blog.pages %}
+            {% if loop.index >= 5 %}{% break %}{% endif %}
+                <li>{{ post.date | date() }} - <a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
+            {% else %}
+                Nothing to see here.
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Socials</h2>
+        <ul>
+            <!-- TODO: All  -->
+            <li><a href="https://github.com/plexlad">github</a></li>
+            <li><a>bluesky</a></li>
+            <li><a>mastodon</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Contact Me</h2>
+        <address>
+            <ul>
+                <li><a>email</a></li>
+                <li><a>keybase</a></li>
+                <li><a>irc</a></li>
+            </ul>
+        </address>
+    </div>
+</section>
+{% endblock content %}

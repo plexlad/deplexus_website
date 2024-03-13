@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Why you snooping, have fun :) -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Optimistic tech and life blog written by Plexlad">
+        <meta name="author" content="Brock Smith (plexlad)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>deplexus</li>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/">portfolio</a></li>
+                    <li><a href="/blog/">blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+        <footer>
+            <div>Source can be found on <a href="">Github</a> or <a href="">Sourcehut</a>.</div>
+            <div>This blog does not reflect the opinions of the affiliates or employers of any of the authors.</div>
+            <div>Each article author is the exclusive owner of their intellectual property.</div>
+            <!-- The fonts used for the site are IBM Plex (Serif, Mono) and Eczar -->
+            <!-- These fonts are open source and locally hosted -->
+        </footer>
+    </body>
+
+</html>
