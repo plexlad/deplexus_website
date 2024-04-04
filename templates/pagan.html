@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}deplexus - Glimpses of Urdr{% endblock %}
+
+{% block content %}
+<h1 class="title">Glimpses of Urðr</h1>
+<p>These are my notes and research regarding my religous journey and experiences. Please be respectful. I started this because I believe it is important to not only keep track of our journey but for people to also understand how to start theirs.</p>
+{% if not section.pages %}
+<div style="text-align: center;">Nothing to see here. (yet...)</div>
+{% endif %}
+<ul>
+    {% for page in section.pages %}
+    <li>{{ page.date | date() }} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}

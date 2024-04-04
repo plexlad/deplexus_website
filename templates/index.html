@@ -8,9 +8,10 @@
 </section>
 <section class="creator-info">
     <h2>Brock Smith</h2>
-    <h3>Full Time Learner / Current College Student / Ordained Dudeist</h3>
+    <h3>Full Time Learner / Current College Student / Pagan Heathenist</h3>
     <p>My name is Brock Smith, but online I am known as <strong>plexlad</strong>. While I am a current student, I love programming and working with technical software. Some of my experience includes daily linux use, usage of several programming languages, and a vindication to always learn and try to understand things.</p>
-    <p>This is my website. My portfolio is <a href="/portfolio">here</a>.</p>
+    <p>While I am a technical person, I am involved in the learning of all sorts of knowledge. I love humans and the way that we are. Technology is awesome and all, but does any of that knowledge matter without being refreshed by the creations and ideas of our peers?</p>
+    <p>This is my website. My portfolio is <a href="/portfolio">here</a>. Check for my blog articles below.</p>
 </section>
 <section>
     <div>
@@ -20,6 +21,18 @@
             {% for post in blog.pages %}
             {% if loop.index >= 5 %}{% break %}{% endif %}
                 <li>{{ post.date | date() }} - <a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
+            {% else %}
+            Nothing to see here. (yet...)
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Glimpses of Urðr</h2>
+        <ul>
+            {% set pagan = get_section(path="pagan/_index.md") %}
+            {% for post in pagan.pages %}
+            {% if loop.index >= 5 %}{% break %}{% endif %}
+            <li>{{ post.date | date() }} - <a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
             {% else %}
             Nothing to see here. (yet...)
             {% endfor %}
