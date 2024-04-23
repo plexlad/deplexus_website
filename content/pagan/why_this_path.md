@@ -1,8 +1,7 @@
 +++
-title = "Why this path?"
-date = 2024-04-04
-draft = true
 authors = [ "plexlad" ]
+date = 2024-04-06
+title = "Why this path?"
 +++
 
 If anyone in my family is reading this, understand that while my beliefs are
@@ -99,6 +98,8 @@ do not know where it came from, there was also a belief that social connections
 could only be maintained like a trade that had to be maintained, and that I was
 not a person with intrisic worth even though I was a living person with lived
 experience.
+
+
 
 *My experience with spiritual experiences (against the church's doctrine)*
 
