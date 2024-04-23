@@ -1,6 +1,7 @@
 +++
 authors = [ "plexlad" ]
 date = 2024-04-06
+draft = true
 title = "Why this path?"
 +++
 
